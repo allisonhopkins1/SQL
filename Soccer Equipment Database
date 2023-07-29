@@ -1,0 +1,35 @@
+-Create a database to compare Soccer Equipment
+
+CREATE table soccer (id text primary key, price Integer, color text, rating integer, need integer, size integer);
+INSERT into
+soccer
+values
+
+("Cleats",100, "black",3,5,6-11),
+("Shin guards",20,"white", 3,5, 2),
+("Socks", 5, "white",3,5,6-11),
+("Shorts(s)", 25, "blue",4,5,1),
+("Shorts(m)", 25, "blue",4,5,2),
+("Shorts(l)", 25, "blue",4,5,3),
+("jersey(s)", 25, "white",4,5,1),
+("jersey(m)", 25, "white",4,5,2),
+("jersey(l)", 25, "white",4,5,3),
+("Ball (s)", 15, "rainbow", 2,5,4),
+("Ball (m)", 15, "rainbow",2,5,5),
+("Goal", 150, "white",5,5,1),
+("pre-wrap", 5, "multiple", 5,1,1),
+("Tape", 5, "white", 5,1,1),
+("Brace", 35, "black",5,1,1);
+
+--display the data base by price
+SELECT * From soccer ORDER BY price;
+
+--What is the price to buy all equipment?
+Select sum (price) from soccer
+
+--What are the 5 most popular items?
+SELECT id, price, rating
+FROM soccer 
+order by rating
+desc 
+limit 5;
